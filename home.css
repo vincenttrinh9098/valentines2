@@ -4,6 +4,8 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
+    overflow: hidden;  /* Prevent scrolling */
+    touch-action: none; /* Optional: prevents swipe scroll */
 }
 
 /* Background image */
