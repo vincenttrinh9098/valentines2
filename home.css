@@ -17,6 +17,7 @@ body {
     min-height: 100vh;
     touch-action: none;
     position: relative; /* keep your layout normal initially */
+    background-size:cover;
 }
 
 /* Optional content styling */
@@ -49,7 +50,7 @@ body.modal-open {
 
         /* Optional: Visual feedback on hover */
         .vending-machine-clickable:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(0, 236, 79, 0);
             border-radius: 20px;
         }
 
@@ -146,9 +147,9 @@ body.modal-open {
         /* Mobile adjustments */
         @media screen and (max-width: 768px) {
             .vending-machine-clickable {
-                width: 50%;
+                width: 65%;
                 height: 43%;
-                top: 32.5%;
+                top: 36.5%;
             }
         }
 
