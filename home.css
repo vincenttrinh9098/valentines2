@@ -29,7 +29,7 @@ body {
   /* Clickable area over vending machine */
         .vending-machine-clickable {
             position: absolute;
-            top: 20%;
+            bottom: 5%;
             left: 50%;
             transform: translateX(-50%);
             width: 40%;
@@ -40,7 +40,7 @@ body {
 
         /* Optional: Visual feedback on hover */
         .vending-machine-clickable:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgb(213, 13, 13);
             border-radius: 20px;
         }
 
@@ -138,8 +138,8 @@ body {
         @media screen and (max-width: 768px) {
             .vending-machine-clickable {
                 width: 50%;
-                height: 33%;
-                top: 25%;
+                height: 43%;
+                top: 34.5%;
             }
         }
 
