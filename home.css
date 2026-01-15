@@ -26,38 +26,120 @@ body {
     font-family: Arial, sans-serif;
 }
 
+  /* Clickable area over vending machine */
+        .vending-machine-clickable {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 60%;
+            cursor: pointer;
+            z-index: 10;
+        }
 
+        /* Optional: Visual feedback on hover */
+        .vending-machine-clickable:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+        }
 
+        /* Cloud Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+        }
 
-/* Center button */
-.center-button {
-    position: absolute;
-    top: 47%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-}
+        .modal.show {
+            display: flex;
+        }
 
-.center-button button {
-    padding: 15px 27px;
-    font-size: 18px;
-    font-family: Arial, sans-serif;
-    background-color: rgb(255, 182, 193);
-    color: white;
-    border: 3px solid rgb(217, 150, 172);
-    border-radius: 14px;
-    cursor: pointer;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
+        .cloud-modal {
+            position: relative;
+            background-color: rgb(255, 240, 245);
+            width: 300px;
+            height: 200px;
+            border-radius: 100px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
 
-.center-button button:hover {
-    background-color: rgb(255, 160, 175);
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
+        /* Cloud puffs */
+        .cloud-modal::before {
+            content: '';
+            position: absolute;
+            background-color: rgb(255, 240, 245);
+            width: 110px;
+            height: 170px;
+            border-radius: 50%;
+            top: -50px;
+            left: 30px;
+        }
 
-.center-button button:active {
-    transform: scale(0.98);
-}
+        .cloud-modal::after {
+            content: '';
+            position: absolute;
+            background-color: rgb(255, 240, 245);
+            width: 110px;
+            height: 170px;
+            border-radius: 50%;
+            top: -60px;
+            right: 30px;
+        }
+
+        .cloud-content {
+            position: relative;
+            z-index: 10;
+            color: rgb(150, 100, 120);
+        }
+
+        .cloud-content h2 {
+            margin: 0 0 15px 0;
+            font-size: 24px;
+        }
+
+        .cloud-content p {
+            margin: 0 0 20px 0;
+            font-size: 16px;
+        }
+
+        .close-btn {
+            background-color: rgb(255, 182, 193);
+            color: white;
+            border: 2px solid rgb(217, 150, 172);
+            border-radius: 15px;
+            padding: 10px 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: none;
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .close-btn:hover {
+            background-color: rgb(255, 160, 175);
+            transform: scale(1.05);
+        }
+
+        /* Mobile adjustments */
+        @media screen and (max-width: 768px) {
+            .vending-machine-clickable {
+                width: 50%;
+                height: 33%;
+                top: 25%;
+            }
+        }
+
