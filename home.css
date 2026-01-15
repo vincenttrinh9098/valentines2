@@ -25,3 +25,39 @@ body {
     padding-top: 20px;
     font-family: Arial, sans-serif;
 }
+
+
+
+
+/* Center button */
+.center-button {
+    position: absolute;
+    top: 47%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.center-button button {
+    padding: 15px 27px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 182, 193);
+    color: white;
+    border: 3px solid rgb(217, 150, 172);
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.center-button button:hover {
+    background-color: rgb(255, 160, 175);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.center-button button:active {
+    transform: scale(0.98);
+}

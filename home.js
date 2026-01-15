@@ -1,11 +1,5 @@
-// Set body height to actual viewport height on iPhone
-function setFullHeight() {
-  const vh = window.innerHeight; // visible viewport height
-  document.body.style.height = `${vh}px`;
+function handleClick() {
+    alert('Button clicked!');
+    // Or redirect to another page:
+    // window.location.href = 'next-page.html';
 }
-
-// Set initially
-setFullHeight();
-
-// Update on resize / orientation change
-window.addEventListener('resize', setFullHeight);
