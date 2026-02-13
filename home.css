@@ -36,120 +36,130 @@ body.modal-open {
     overflow: hidden; /* ensure no scrolling */
 }
 
-  /* Clickable area over vending machine */
-        .vending-machine-clickable {
-            position: absolute;
-            bottom: 5%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40%;
-            height: 60%;
-            cursor: pointer;
-            z-index: 11;
-        }
+/* Clickable area over vending machine */
+.vending-machine-clickable {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 60%;
+    cursor: pointer;
+    z-index: 11;
+}
 
-        /* Optional: Visual feedback on hover */
-        .vending-machine-clickable:hover {
-            background-color: rgba(0, 236, 79, 0);
-            border-radius: 20px;
-        }
+/* Optional: Visual feedback on hover */
+.vending-machine-clickable:hover {
+    background-color: rgba(0, 236, 79, 0);
+    border-radius: 20px;
+}
 
-        /* Cloud Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 100;
-            justify-content: center;
-            align-items: center;
-        }
+/* Cloud Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
 
-        .modal.show {
-            display: flex;
-        }
+.modal.show {
+    display: flex;
+}
 
-        .cloud-modal {
-            position: relative;
-            background-color: rgb(255, 240, 245);
-            width: 300px;
-            height: 200px;
-            border-radius: 100px;
-            padding: 40px 30px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
+.cloud-modal {
+    position: relative;
+    background-color: rgb(255, 240, 245);
+    width: 300px;
+    height: 200px;
+    border-radius: 100px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
 
-        /* Cloud puffs */
-        .cloud-modal::before {
-            content: '';
-            position: absolute;
-            background-color: rgb(255, 240, 245);
-            width: 110px;
-            height: 170px;
-            border-radius: 50%;
-            top: -50px;
-            left: 30px;
-        }
+.cloud-modal.image-mode {
+    width: 600px;
+    max-width: 90vw;
+    min-height: 450px;
+}
 
-        .cloud-modal::after {
-            content: '';
-            position: absolute;
-            background-color: rgb(255, 240, 245);
-            width: 110px;
-            height: 170px;
-            border-radius: 50%;
-            top: -60px;
-            right: 30px;
-        }
+.cloud-modal.text-mode {
+    width: 400px;
+    min-height: 200px;
+}
 
-        .cloud-content {
-            position: relative;
-            z-index: 10;
-            color: rgb(150, 100, 120);
-        }
+/* Cloud puffs */
+.cloud-modal::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(255, 240, 245);
+    width: 110px;
+    height: 170px;
+    border-radius: 50%;
+    top: -50px;
+    left: 30px;
+}
 
-        .cloud-content h2 {
-            margin: 0 0 15px 0;
-            font-size: 24px;
-        }
+.cloud-modal::after {
+    content: '';
+    position: absolute;
+    background-color: rgb(255, 240, 245);
+    width: 110px;
+    height: 170px;
+    border-radius: 50%;
+    top: -60px;
+    right: 30px;
+}
 
-        .cloud-content p {
-            margin: 0 0 20px 0;
-            font-size: 16px;
-        }
+.cloud-content {
+    position: relative;
+    z-index: 10;
+    color: rgb(150, 100, 120);
+}
 
-        .close-btn {
-            background-color: rgb(255, 182, 193);
-            color: white;
-            border: 2px solid rgb(217, 150, 172);
-            border-radius: 15px;
-            padding: 10px 25px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            border: none;
-            position: absolute;
-            top: 120px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+.cloud-content h2 {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+}
 
-        .close-btn:hover {
-            background-color: rgb(255, 160, 175);
-            transform: scale(1.05);
-        }
+.cloud-content p {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+}
 
-        /* Mobile adjustments */
-        @media screen and (max-width: 768px) {
-            .vending-machine-clickable {
-                width: 65%;
-                height: 43%;
-                top: 36.5%;
-            }
-        }
+.close-btn {
+    background-color: rgb(255, 182, 193);
+    color: white;
+    border: 2px solid rgb(217, 150, 172);
+    border-radius: 15px;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: none;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.close-btn:hover {
+    background-color: rgb(255, 160, 175);
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .vending-machine-clickable {
+        width: 65%;
+        height: 43%;
+        top: 36.5%;
+    }
+}
 
