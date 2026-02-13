@@ -24,8 +24,8 @@ function openModal() {
             <img src="${randomImage}" 
                 alt="Surprise!" 
                 style="
-                    max-width: 90vw;
-                    max-height: 80vh;
+                    max-width: 70vw;
+                    max-height: 55vh;
                     width: auto;
                     height: auto;
                     border-radius: 8px;
