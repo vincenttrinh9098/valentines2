@@ -6,7 +6,7 @@ const compliments = [
 ];
 
 const images = Array.from({ length: 123 }, (_, i) =>
-    `/images/image${String(i + 1).padStart(3, '0')}.jpg`
+    `images/image${String(i + 1).padStart(3, '0')}.jpg`  // relative path, no leading /
 );
 
 function openModal() {
