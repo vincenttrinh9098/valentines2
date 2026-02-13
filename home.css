@@ -84,10 +84,13 @@ body.modal-open {
 }
 
 .cloud-modal.image-mode {
-    width: 600px;
+    width: auto;
+    height: auto;
     max-width: 90vw;
-    min-height: 450px;
+    max-height: 90vh;
+    display: inline-block;
 }
+
 
 .cloud-modal.text-mode {
     width: 400px;
