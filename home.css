@@ -15,7 +15,6 @@ body {
     background-repeat: no-repeat;
     background-color: rgb(226, 161, 182);
     min-height: 100vh;
-    touch-action: none;
     position: relative; /* keep your layout normal initially */
     background-size:cover;
 }
