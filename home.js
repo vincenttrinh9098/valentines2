@@ -29,7 +29,7 @@ function openModal() {
     const contentElement = document.querySelector('.cloud-content p');
     const modal = document.querySelector('.cloud-modal')
 
-    const showImage = Math.random() < 0.1;
+    const showImage = Math.random() < 0.7;
     
     console.log('Show image:', showImage); // Check what's being chosen
     
